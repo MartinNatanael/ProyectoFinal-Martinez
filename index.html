@@ -1,0 +1,78 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Martin Martinez | Entrega Final - Curso JS Coder House</title>
+     <!-- lottie   -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js"></script>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <main>
+     <!-- seccion derecha   -->
+      <section class="right">
+        <h1>Calcula tu Prestamo</h1>
+        <lottie-player autoplay speed=".5" loop mode="normal"src="https://lottie.host/e2a671dc-1cda-4aac-9fb5-b200d8ab5c94/8iW2kcGwhy.json" style="width: 320px; height: 300px;"
+        >
+        </lottie-player>
+      </section>
+     <!-- seccion izquierda -->
+     <section class="left">  
+        <div>
+              <form id="formulario">
+                <div class="row mb-3">
+                  <label for="amount" class="col-sm-6 col-form-label">Ingrese el monto</label>
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control" id="monto" required>
+                  </div>
+                </div>
+                <fieldset class="col mb-3">
+                  <legend class="col-form-label col-sm-2 pt-0">Planes</legend>
+                  <div class="radios-container">
+                    <div class="form-check">
+                      <input class="form-check-input plan" type="radio" name="plan" id="plan-12" value="12" required>
+                      <label class="form-check-label" for="plan-12">12 Cuotas</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input plan" type="radio" name="plan" id="plan-24" value="24" required>
+                      <label class="form-check-label" for="plan-24">24 Cuotas</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input plan" type="radio" name="plan" id="plan-36" value="36" required >
+                      <label class="form-check-label" for="plan-36">36 Cuotas</label>
+                    </div>
+                  </div>
+                </fieldset>
+                <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary " id="submit">Calcular</button>
+                <button id="consultarNueva" class="btn btn-secondary button-display">Realizar Otra Consulta</button>
+                <button id="consultar" class="btn btn-success">Consultar Historial</button>
+                  <button id="borrar" class="btn btn-danger">Borrar Historial</button>
+                </div>
+              </form>
+              <div id="contenedor"></div>
+        </div>
+    </section>
+    <section class="currency">
+      <h4>Conversión</h4>
+      <div id="conversion-data-1"></div>
+      <div id="conversion-data-2"></div>
+    </section>
+    </main>
+      
+    <!-- main JS -->
+    <script src="./main.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <!-- librerias -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
+
